@@ -1,0 +1,14 @@
+$text-shadow : 1px 1px 1px #000;
+.main-banner {
+	background: url("/assets/images/people.jpg");
+	background-size: cover;
+	height: 600px;
+}
+.main-banner h3{
+	color:#66E54C;
+	font-size: 30px; 
+	text-shadow: $text-shadow;
+}
+.main-banner p {
+	color:#fff;
+}
