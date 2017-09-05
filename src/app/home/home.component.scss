@@ -1,14 +1,42 @@
 $text-shadow : 1px 1px 1px #000;
+$primary-color: #66E54C;
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
 .main-banner {
-	background: url("/assets/images/people.jpg");
-	background-size: cover;
-	height: 600px;
+	background: url("/assets/images/people.jpg") 50% 60% no-repeat;
+	background-size:cover;
+	height: 500px;
 }
 .main-banner h3{
-	color:#66E54C;
+	color:$primary-color;
 	font-size: 30px; 
 	text-shadow: $text-shadow;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
 }
 .main-banner p {
 	color:#fff;
+	margin-bottom: 100px;
+	letter-spacing: 2px;
+}
+.main-banner a {
+	border: 1px solid $primary-color;
+	background-color: $primary-color;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    @include border-radius(10px);
+    transition: all 0.2s ease;
+}
+.main-banner a:hover {
+    border: 3px solid rgba(0,0,0,0.6);
 }
