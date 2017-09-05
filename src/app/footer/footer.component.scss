@@ -1,0 +1,49 @@
+$footer-bg : #1a1a1a;
+$head-color : #66E54C;
+$padding : 10px;
+
+footer {
+	background:$footer-bg;
+	color: $head-color;
+	bottom: 0px;
+	width: 100%;
+	padding-top: $padding + 30px;
+}
+
+.job-footer {
+	h4 {
+		letter-spacing: 1px;
+	}
+	ul{
+		list-style: none;
+		margin-left: 0px;
+		padding-left: 0px;
+		li{
+			margin-bottom: 5px;
+			a {
+				color:#f0f0f0;
+				text-decoration: none;
+				transition: all 0.4s ease;
+				letter-spacing: 1px;
+				&:hover {
+					color:$head-color;
+				}
+			}
+		}
+	}
+}
+.job-copyright {
+	color: #fff;
+	background:#000;
+	position: relative;
+	padding: 10px;
+	text-align: center;
+	span {
+		text-align: center;
+		letter-spacing: 1px;
+	}
+}
+.jobs-social {
+	display: inline-block;
+	margin-right: 25px;
+}
