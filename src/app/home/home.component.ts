@@ -12,4 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  headline = 'Entrepreneurship India Jobs';
+  subline = 'Find the job you love...';
+
 }

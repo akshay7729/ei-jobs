@@ -1,0 +1,34 @@
+$primary-color : #66E54C;
+$bg-color : grey;
+
+.job-portal{
+	margin-top:40px;
+}
+.portal-style {
+	background-color: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.job-portal .col-md-3 {
+	@extend .portal-style;
+	border-right: 1px solid #ddd;
+}
+.job-portal .col-md-9 {
+	@extend .portal-style;
+}
+.search-icon {
+	position: absolute;
+    margin-top: 12px;
+    margin-left: 10px;
+    i {
+    	color:$bg-color;
+    	font-size: 23px;
+    }
+}
+#search {
+	padding-left: 40px;
+	border-color:$bg-color;
+	&:focus {
+		border-color:$bg-color !important;
+	}
+}
