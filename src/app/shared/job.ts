@@ -7,4 +7,5 @@ export class Job {
 	team: string;
 	website: string;
 	applyUrl: string;
+	logo:string;
 }

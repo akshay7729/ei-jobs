@@ -1,0 +1,18 @@
+<div class="filter-head">
+	<h5>Filters</h5><hr />
+	<p>{{filterForm.value | json }} {{filterForm.status | json}}</p>
+	<form novalidate [formGroup]="filterForm">
+	  	<div class="form-check">
+		  <label class="form-check-label">
+		    <input class="form-check-input" type="checkbox" value="" formControlName="Bangalore">
+		    Bangalore
+		  </label>
+		</div>
+		<div class="form-check">
+		  <label class="form-check-label">
+		    <input class="form-check-input" type="checkbox" value="" formControlName="Chennai">
+		    Chennai
+		  </label>
+		</div>
+	</form>
+</div>
