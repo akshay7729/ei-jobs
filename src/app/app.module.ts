@@ -12,6 +12,9 @@ import { FooterComponent } from './footer/footer.component';
 
 import { JobsService } from './services/jobs.service';
 import { FiltersComponent } from './filters/filters.component';
+import { CheckboxPipe } from './pipes/checkbox.pipe';
+import { FilterPipe } from './pipes/checkbox.pipe';
+import { SortByPipe } from './pipes/checkbox.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { FiltersComponent } from './filters/filters.component';
     HomeComponent,
     JobsComponent,
     FooterComponent,
-    FiltersComponent
+    FiltersComponent,
+    CheckboxPipe,
+    FilterPipe,
+    SortByPipe
   ],
   imports: [
     BrowserModule,

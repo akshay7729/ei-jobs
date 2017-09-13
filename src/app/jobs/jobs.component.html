@@ -3,7 +3,7 @@
 		<form>
 			  <div class="form-group">
 			    <label for="search" class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></label>
-			    <input class="form-control form-control-lg" id ="search" type="text" placeholder="search jobs here">
+			    <input class="form-control form-control-lg" id ="search" type="text" placeholder="search jobs here" [(ngModel)]="term" name="term">
 			  </div>
 		</form>
 	<hr />
@@ -21,7 +21,7 @@
 
 		<div class="col-md-6">
 			<ul class="jobs-list">
-				<li *ngFor="let joblist of jobList">
+				<li *ngFor="let joblist of jobList | filter: term | sortBy: 'team'">
 					<div class="row">
 						<div class="col-md-2">
 							<img src="{{joblist.logo}}" class="job-list-img" alt="Startup">

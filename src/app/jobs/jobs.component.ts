@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Job } from '../shared/job';
 import { JobsService } from '../services/jobs.service';
+import { FilterPipe, SortByPipe } from '../pipes/checkbox.pipe';
 
 @Component({
   selector: 'app-jobs',
