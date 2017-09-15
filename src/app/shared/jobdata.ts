@@ -48,7 +48,7 @@ export const JOBS: Job[] = [
             	{
                 company:'Instagram',
                 position:'Social Media Manager',
-                type:'Internship',
+                type:'Freelance',
                 salary:'5k - 10k',
                 location:'New York',
                 team:'20',

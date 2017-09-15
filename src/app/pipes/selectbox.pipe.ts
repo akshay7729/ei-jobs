@@ -7,7 +7,7 @@ import { JobsService } from '../services/jobs.service';
 export class SelectboxPipe implements PipeTransform {
 
   transform(items: any, sel?: any): any {
-        return sel ? items.filter(sal => sal.position === sel) : items;
+        return sel ? items.filter(sal => sal.type === sel) : items;
     }
 
 }

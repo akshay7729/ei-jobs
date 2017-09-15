@@ -29,14 +29,11 @@ export class JobsComponent implements OnInit {
     }
   ]
 
-  private positionSelect: any[] = [{
-        name: "Social Media Manager",
-        position: "Social Media Manager"
-    },
-    {
-        name: "Product Manager",
-        position: "Product Manager"
-    }]
+  private positionSelect: any[] = [
+    {type: "Full Time"},
+    {type: "Internship"},
+    {type: "Freelance"}
+  ]
 
   constructor(private jobservice: JobsService) {
    }

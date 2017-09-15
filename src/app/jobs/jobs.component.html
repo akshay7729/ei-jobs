@@ -1,10 +1,28 @@
 <div class="container-fluid job-headline">
 	<div class="row">
+		<div class="container bannerJobHead">
+				<div>
+					<h3>Entrepreneurship India Jobs</h3>
+					<h5>Full Time | Internship | Freelance</h5>
+			</div>
+		</div>
 		<form>
-				<div class="form-group">
-			    <label for="search" class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></label>
-			    <input class="form-control form-control-lg" id ="search" type="text" placeholder="search jobs here" [(ngModel)]="term" name="term">
-		    </div>
+			<div class="container jobSearchDropdown"><div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+				    <select class="form-control jobFilterDropdown" [(ngModel)]="sel" name="sel">
+					    <option [ngValue]="undefined" selected >Select Job Type</option>
+					    <option *ngFor="let positionOpt of positionSelect" [ngValue]="positionOpt.type">{{positionOpt.type}}</option>
+					</select>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="form-group">
+					    <label for="search" class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></label>
+					    <input class="form-control form-control-lg" id ="search" type="text" placeholder="search jobs here" [(ngModel)]="term" name="term">
+			    	</div>
+				</div>
+				</div></div>
 		</form>
 	<hr />
 	</div>
@@ -16,15 +34,7 @@
 			<!-- <app-filters></app-filters> -->
 			<div class="filter-head">
 				<h5>Filters</h5><hr />
-				<form novalidate>
-						<div class="form-group">
-						    <select class="form-control" [(ngModel)]="sel" name="sel">
-							    <option [ngValue]="undefined" selected >Select Job Type</option>
-							   <option *ngFor="let positionOpt of positionSelect" [ngValue]="positionOpt.position">{{positionOpt.name}}</option>
-							    
-							</select>
-						</div>
-
+				<!-- <form novalidate>
 						<div class="form-check" *ngFor="let joblists of jobList">
 						  <label class="form-check-label">
 						  	<label class="checkbox-filter-label"></label>
@@ -32,10 +42,10 @@
 						  </label>
 						</div>
 
-						<!-- <div class="form-group">
+						<div class="form-group">
 						    0 <input #rangeInput type="range" min="0" max="100" [(ngModel)]="teamList" name="teamList" /> 100
-						</div> -->
-				</form> 
+						</div>
+				</form>  -->
 			</div>
 		</div>
 
