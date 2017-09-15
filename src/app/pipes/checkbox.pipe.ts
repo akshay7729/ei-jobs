@@ -1,15 +1,17 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { JobsService } from '../services/jobs.service';
-import { LowerCasePipe } from '@angular/common';
 
 @Pipe({
-  name: 'checkbox'
+  name: 'range'
 })
 export class CheckboxPipe implements PipeTransform {
 
-  transform(items: any, args?: any): any {
-    return null;
-  }
+  transform(value: any, teamList?: any): any {
+    console.log('teamList',teamList);
+    return (teamList || teamList == 0)
+            ? value.filter(sal => { return sal.team })
+            : value;
+    }
 
 }
 
@@ -18,9 +20,7 @@ export class CheckboxPipe implements PipeTransform {
     pure: false
 })
 export class FilterPipe implements PipeTransform {
-    transform(items: any[], term): any {
-        console.log('term', term);
-      
+    transform(items: any[], term?:any): any {
         return term 
             ? items.filter(item => item.company.search(new RegExp(term, 'i')) !== -1)
             : items;

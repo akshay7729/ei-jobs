@@ -15,6 +15,9 @@ import { FiltersComponent } from './filters/filters.component';
 import { CheckboxPipe } from './pipes/checkbox.pipe';
 import { FilterPipe } from './pipes/checkbox.pipe';
 import { SortByPipe } from './pipes/checkbox.pipe';
+import { CheckcityPipe } from './pipes/checkcity.pipe';
+import { DropdownPipe } from './pipes/dropdown.pipe';
+import { SelectboxPipe } from './pipes/selectbox.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { SortByPipe } from './pipes/checkbox.pipe';
     FiltersComponent,
     CheckboxPipe,
     FilterPipe,
-    SortByPipe
+    SortByPipe,
+    CheckcityPipe,
+    DropdownPipe,
+    SelectboxPipe,
   ],
   imports: [
     BrowserModule,

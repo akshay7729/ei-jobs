@@ -1,10 +1,10 @@
 <div class="container-fluid job-headline">
 	<div class="row">
 		<form>
-			  <div class="form-group">
+				<div class="form-group">
 			    <label for="search" class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></label>
 			    <input class="form-control form-control-lg" id ="search" type="text" placeholder="search jobs here" [(ngModel)]="term" name="term">
-			  </div>
+		    </div>
 		</form>
 	<hr />
 	</div>
@@ -13,45 +13,65 @@
 <div class="container-fluid job-portal">
 	<div class="row">
 		<div class="col-md-3">
-			<!-- <div class="filter-head">
+			<!-- <app-filters></app-filters> -->
+			<div class="filter-head">
 				<h5>Filters</h5><hr />
-			</div> -->
-			<app-filters></app-filters>
+				<form novalidate>
+						<div class="form-group">
+						    <select class="form-control" [(ngModel)]="sel" name="sel">
+							    <option [ngValue]="undefined" selected >Select Job Type</option>
+							   <option *ngFor="let positionOpt of positionSelect" [ngValue]="positionOpt.position">{{positionOpt.name}}</option>
+							    
+							</select>
+						</div>
+
+						<div class="form-check" *ngFor="let joblists of jobList">
+						  <label class="form-check-label">
+						  	<label class="checkbox-filter-label"></label>
+						    <input class="form-check-input" type="checkbox" name="city" value="Bangalore" [(ngModel)]="city"> {{joblists.location}}
+						  </label>
+						</div>
+
+						<!-- <div class="form-group">
+						    0 <input #rangeInput type="range" min="0" max="100" [(ngModel)]="teamList" name="teamList" /> 100
+						</div> -->
+				</form> 
+			</div>
 		</div>
 
 		<div class="col-md-6">
 			<ul class="jobs-list">
-				<li *ngFor="let joblist of jobList | filter: term | sortBy: 'team'">
+				<li *ngFor="let joblists of jobList | filter: term | sortBy: 'team' | range: rangeInput?.value | checkcity: checked | selectbox: sel">
 					<div class="row">
 						<div class="col-md-2">
-							<img src="{{joblist.logo}}" class="job-list-img" alt="Startup">
+							<img src="{{joblists.logo}}" class="job-list-img" alt="Startup">
 						</div>
 						<div class="col-md-7 jobs-list-details">
-							<h3>{{joblist.company}}</h3>
+							<h3>{{joblists.company}}</h3>
 							<h5>
 								<i class="fa fa-eercast" aria-hidden="true"></i>
-								 {{joblist.position}}
+								 {{joblists.position}}
 							</h5>
 							<h5>
 								<i class="fa fa-briefcase" aria-hidden="true"></i>
-								 {{joblist.type}}
+								 {{joblists.type}}
 							</h5>
 							<h5>
 								<i class="fa fa-inr" aria-hidden="true"></i>
-								 {{joblist.salary}}
+								 {{joblists.salary}}
 							</h5>
 							<h5>
 								<i class="fa fa-map-marker" aria-hidden="true"></i>
-								 {{joblist.location}}
+								 {{joblists.location}}
 							</h5>
 							<h5>
 								<i class="fa fa-users" aria-hidden="true"></i>
-								 {{joblist.team}}
+								 {{joblists.team}}
 							</h5>
-							<h5><a href="{{joblist.applyUrl}}"> {{joblist.website}}</a></h5>
+							<h5><a href="{{joblists.applyUrl}}"> {{joblists.website}}</a></h5>
 						</div>
 						<div class="col-md-3 jobs-apply">
-							<a href="{{joblist.applyUrl}}">Apply Now</a>
+							<a href="{{joblists.applyUrl}}">Apply Now</a>
 						</div>
 					</div>
 				</li>
