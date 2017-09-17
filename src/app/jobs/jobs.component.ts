@@ -17,6 +17,8 @@ export class JobsComponent implements OnInit {
   jobList: Job[];
   checked: boolean = false;
   sliderValue: number = 0;
+  minSal: number = 0;
+  maxSal: number = 100;
   cities:any = [
     {
       id: "1",

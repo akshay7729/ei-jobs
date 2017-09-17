@@ -48,12 +48,26 @@
 						<span>0</span> <input type="range" min="0" max="100" [(ngModel)]="sliderValue" /> <span>100</span>
 					</div> 
 				</div>
+
+				<div class="jobTeamSize">
+					<label><i class="fa fa-inr" aria-hidden="true"></i> Minimum Salary</label> : <span class="jobRangeValue">{{ minSal }} k</span>
+					<div class="jobRangeSlider">
+						<span>0</span> <input type="range" min="0" max="100" [(ngModel)]="minSal" /> <span>100k</span>
+					</div> 
+				</div>
+
+				<div class="jobTeamSize">
+					<label><i class="fa fa-inr" aria-hidden="true"></i> Maximum Salary</label> : <span class="jobRangeValue">{{ maxSal }} k</span>
+					<div class="jobRangeSlider">
+						<span>0</span> <input type="range" min="0" max="100" [(ngModel)]="maxSal" /> <span>100k</span>
+					</div> 
+				</div>
 			</div>
 		</div>
 
 		<div class="col-md-6">
 			<ul class="jobs-list">
-				<li *ngFor="let joblists of jobList | filter: term | selectbox: sel | checkcity: checked | range: sliderValue">
+				<li *ngFor="let joblists of jobList | filter: term | selectbox: sel | checkcity: checked | range: sliderValue | minSalary: minSal | maxSalary: maxSal">
 					<div class="row">
 						<div class="col-md-2">
 							<img src="{{joblists.logo}}" class="job-list-img" alt="Startup">
