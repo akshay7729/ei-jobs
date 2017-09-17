@@ -2,6 +2,7 @@ import { Job } from './job';
 
 export const JOBS: Job[] = [
   						 {
+                id: 1,
   						 	company:'Entrepreneurship India',
   						 	position:'Social Media Manager',
   						 	type:'Internship',
@@ -10,20 +11,26 @@ export const JOBS: Job[] = [
   						 	team:'5',
   						 	website:'www.entrepreneurshipindia.co.in',
   						 	applyUrl:'http://www.entrepreneurshipindia.co.in',
-  						 	logo: '/assets/images/jobs/ei.png'
+  						 	logo: '/assets/images/jobs/ei.png',
+                min_salary: 30,
+                max_salary: 100
   						 },
   						{
+                id: 2,
   							company:'snapchat',
   							position:'Filter Manager',
   							type:'Full Time',
   							salary:'500k - 800k',
   							location:'New York',
-  							team:'5000',
+  							team:'30',
   							website:'www.google.com',
   							applyUrl:'http://www.google.com',
-  							logo: '/assets/images/jobs/snapchat.png'
+  							logo: '/assets/images/jobs/snapchat.png',
+                min_salary: 30,
+                max_salary: 100
   						},
   						{
+                id: 3,
   							company:'Digital Ocean',
   							position:'Social Media Manager',
   							type:'Internship',
@@ -32,29 +39,37 @@ export const JOBS: Job[] = [
   							team:'60',
   							website:'www.digitalocean.com',
   							applyUrl:'http://www.digitalocean.com',
-  							logo: '/assets/images/jobs/do.png'
+  							logo: '/assets/images/jobs/do.png',
+                min_salary: 30,
+                max_salary: 100
   						},
               {
+                id: 4,
                 company:'Google',
                 position:'Product Manager',
                 type:'Full Time',
                 salary:'5000k - 10000k',
                 location:'Bangalore',
-                team:'5000',
+                team:'50',
                 website:'www.google.com',
                 applyUrl:'http://www.google.com',
-                logo: '/assets/images/jobs/google.png'
+                logo: '/assets/images/jobs/google.png',
+                min_salary: 30,
+                max_salary: 100
             	},
             	{
+                id: 5,
                 company:'Instagram',
                 position:'Social Media Manager',
                 type:'Freelance',
                 salary:'5k - 10k',
                 location:'New York',
-                team:'20',
+                team:'90',
                 website:'www.digitalocean.com',
                 applyUrl:'http://www.digitalocean.com',
-                logo: '/assets/images/jobs/instagram.png'
+                logo: '/assets/images/jobs/instagram.png',
+                min_salary: 30,
+                max_salary: 100,
             	},
 
   					 ];

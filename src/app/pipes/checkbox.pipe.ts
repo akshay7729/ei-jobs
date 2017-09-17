@@ -2,20 +2,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { JobsService } from '../services/jobs.service';
 
 @Pipe({
-  name: 'range'
-})
-export class CheckboxPipe implements PipeTransform {
-
-  transform(value: any, teamList?: any): any {
-    console.log('teamList',teamList);
-    return (teamList || teamList == 0)
-            ? value.filter(sal => { return sal.team })
-            : value;
-    }
-
-}
-
-@Pipe({
     name: 'filter',
     pure: false
 })

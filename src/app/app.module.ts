@@ -12,12 +12,12 @@ import { FooterComponent } from './footer/footer.component';
 
 import { JobsService } from './services/jobs.service';
 import { FiltersComponent } from './filters/filters.component';
-import { CheckboxPipe } from './pipes/checkbox.pipe';
 import { FilterPipe } from './pipes/checkbox.pipe';
 import { SortByPipe } from './pipes/checkbox.pipe';
 import { CheckcityPipe } from './pipes/checkcity.pipe';
 import { DropdownPipe } from './pipes/dropdown.pipe';
 import { SelectboxPipe } from './pipes/selectbox.pipe';
+import { RangePipe } from './pipes/range.pipe';
 
 @NgModule({
   declarations: [
@@ -27,12 +27,12 @@ import { SelectboxPipe } from './pipes/selectbox.pipe';
     JobsComponent,
     FooterComponent,
     FiltersComponent,
-    CheckboxPipe,
     FilterPipe,
     SortByPipe,
     CheckcityPipe,
     DropdownPipe,
     SelectboxPipe,
+    RangePipe,
   ],
   imports: [
     BrowserModule,

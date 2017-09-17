@@ -6,11 +6,11 @@ import { JobsService } from '../services/jobs.service';
 })
 export class CheckcityPipe implements PipeTransform {
 
-  transform(check: any, checked: any): any {
-  	console.log('checked',checked);
+  transform(check: any[], checked: any[]): any[] {
+    console.log('checked',checked);
     return checked
-            ? check.filter(city => city.location == checked) 
+            ? check.filter(city =>  city.name === checked) 
             : check;
-  	}
+  }
 
 }

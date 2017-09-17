@@ -1,4 +1,5 @@
 export class Job {
+	id:number;
 	company: string;
 	position: string;
 	type: string;
@@ -8,4 +9,6 @@ export class Job {
 	website: string;
 	applyUrl: string;
 	logo:string;
+	min_salary:number;
+	max_salary:number;
 }

@@ -3,7 +3,6 @@ import { Job } from '../shared/job';
 import { JobsService } from '../services/jobs.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Filter } from '../shared/filter';
-import { CheckboxPipe } from '../pipes/checkbox.pipe';
 import { CheckcityPipe } from '../pipes/checkcity.pipe';
 import { JobsComponent } from '../jobs/jobs.component';
 
