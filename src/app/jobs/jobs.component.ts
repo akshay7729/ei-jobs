@@ -15,20 +15,19 @@ import { SelectboxPipe } from '../pipes/selectbox.pipe';
 export class JobsComponent implements OnInit {
 
   jobList: Job[];
-  checked: boolean = false;
   sliderValue: number = 0;
   minSal: number = 0;
   maxSal: number = 100;
-  cities:any = [
+  checked:any = [
     {
       id: "1",
       name: "Bangalore",
-      selected: true
+      selected: false
     },
     {
       id: "2",
       name: "Gurgoan",
-      selected: true
+      selected: false
     }
   ]
 

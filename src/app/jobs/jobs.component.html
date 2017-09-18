@@ -33,15 +33,6 @@
 		<div class="col-md-3">
 			<div class="filter-head">
 				<h5>Filters</h5><hr />
-				<!-- <form novalidate>
-						<div class="form-check" *ngFor="let c of cities">
-						  <label class="form-check-label">
-						  	<label class="checkbox-filter-label"></label>
-						    <input class="form-check-input" type="checkbox" [(ngModel)]="checked" name="city" value="c.value"> {{c.name}}
-						  </label>
-						</div>
-				</form> -->
-
 				<div class="jobTeamSize">
 					<label><i class="fa fa-users" aria-hidden="true"></i> Team Size</label> : <span class="jobRangeValue">{{ sliderValue }}</span>
 					<div class="jobRangeSlider">
@@ -62,12 +53,21 @@
 						<span>0</span> <input type="range" min="0" max="100" [(ngModel)]="maxSal" /> <span>100k</span>
 					</div> 
 				</div>
+
+				<!-- <div class="jobTeamSize">
+					<label><i class="fa fa-map-marker" aria-hidden="true"></i> Filter by Cities</label>
+					<div class="jobRangeSlider" *ngFor="let city of checked">
+						<input type="checkbox" name="city" value={{city.name}}
+						 [(ngModel)]="checked[i]"/>
+						 <label>{{city.name}}</label>
+					</div> 
+				</div> -->
 			</div>
 		</div>
 
 		<div class="col-md-6">
 			<ul class="jobs-list">
-				<li *ngFor="let joblists of jobList | filter: term | selectbox: sel | checkcity: checked | range: sliderValue | minSalary: minSal | maxSalary: maxSal">
+				<li *ngFor="let joblists of jobList | filter: term | selectbox: sel | range: sliderValue | minSalary: minSal | maxSalary: maxSal">
 					<div class="row">
 						<div class="col-md-2">
 							<img src="{{joblists.logo}}" class="job-list-img" alt="Startup">

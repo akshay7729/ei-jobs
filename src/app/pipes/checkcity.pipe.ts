@@ -9,7 +9,7 @@ export class CheckcityPipe implements PipeTransform {
   transform(check: any[], checked: any[]): any[] {
     console.log('checked',checked);
     return checked
-            ? check.filter(city =>  city.name === checked) 
+            ? check.filter(city => city.name == checked) 
             : check;
   }
 

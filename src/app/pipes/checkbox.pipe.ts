@@ -8,7 +8,9 @@ import { JobsService } from '../services/jobs.service';
 export class FilterPipe implements PipeTransform {
     transform(items: any[], term?:any): any {
         return term 
-            ? items.filter(item => item.company.search(new RegExp(term, 'i')) !== -1)
+            ? items.filter(item => item.company.search(new RegExp(term, 'i')) !== -1
+             || item.position.search(new RegExp(term, 'i')) !== -1
+             || item.location.search(new RegExp(term, 'i')) !== -1)
             : items;
     }
 }
