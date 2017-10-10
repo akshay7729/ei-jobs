@@ -10,7 +10,7 @@ export const JOBS: Job[] = [
   						 	team:'5',
   						 	website:'www.entrepreneurshipindia.co.in',
   						 	applyUrl:'http://www.entrepreneurshipindia.co.in',
-  						 	logo: '/assets/images/jobs/ei.png',
+  						 	logo: './assets/images/jobs/ei.png',
                 min_salary: 30,
                 max_salary: 100
   						 },
@@ -23,7 +23,7 @@ export const JOBS: Job[] = [
   							team:'30',
   							website:'www.clubscube.com',
   							applyUrl:'http://www.clubscube.com',
-  							logo: '/assets/images/jobs/clubscube.png',
+  							logo: './assets/images/jobs/clubscube.png',
                 min_salary: 50,
                 max_salary: 80
   						},
@@ -36,7 +36,7 @@ export const JOBS: Job[] = [
   							team:'60',
   							website:'www.spikeship.com',
   							applyUrl:'http://www.spikeship.com',
-  							logo: '/assets/images/jobs/company3.png',
+  							logo: './assets/images/jobs/company3.png',
                 min_salary: 20,
                 max_salary: 30
   						},
@@ -49,7 +49,7 @@ export const JOBS: Job[] = [
                 team:'50',
                 website:'www.saas-company.com',
                 applyUrl:'http://www.saas-company.com',
-                logo: '/assets/images/jobs/company4.png',
+                logo: './assets/images/jobs/company4.png',
                 min_salary: 90,
                 max_salary: 100
             	},
@@ -62,7 +62,7 @@ export const JOBS: Job[] = [
                 team:'90',
                 website:'www.xyz.com',
                 applyUrl:'http://www.xyz.com',
-                logo: '/assets/images/jobs/company6.png',
+                logo: './assets/images/jobs/company6.png',
                 min_salary: 10,
                 max_salary: 40,
             	},

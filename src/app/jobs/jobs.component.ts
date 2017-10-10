@@ -15,6 +15,8 @@ import { SelectboxPipe } from '../pipes/selectbox.pipe';
 export class JobsComponent implements OnInit {
 
   jobList: Job[];
+  sel;
+  term;
   sliderValue: number = 0;
   minSal: number = 0;
   maxSal: number = 100;
@@ -31,7 +33,7 @@ export class JobsComponent implements OnInit {
     }
   ]
 
-  private positionSelect: any[] = [
+  public positionSelect: any[] = [
     {type: "Full Time"},
     {type: "Internship"},
     {type: "Freelance"}
